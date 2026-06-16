@@ -1,0 +1,101 @@
+┌─────────────────┐
+│     Browser     │
+│ https://www.    │
+│ google.com      │
+└────────┬────────┘
+         │
+         │ 1. DNS Request
+         ▼
+┌─────────────────┐
+│   DNS Resolver  │
+│ Returns IP Addr │
+└────────┬────────┘
+         │
+         │ IP Address Found
+         ▼
+┌─────────────────┐
+│ TCP Connection  │
+│ Port 443 (HTTPS)│
+└────────┬────────┘
+         │
+         │ TLS Handshake
+         │ Encrypted Traffic
+         ▼
+┌─────────────────┐
+│    Firewall     │
+│ Security Check  │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│  Load Balancer  │
+│ Selects Backend │
+│     Server      │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│   Web Server    │
+│ (Nginx/Apache)  │
+└────────┬────────┘
+         │
+         │ Dynamic Request
+         ▼
+┌─────────────────┐
+│ Application     │
+│     Server      │
+│ Business Logic  │
+└────────┬────────┘
+         │
+         │ SQL / Query
+         ▼
+┌─────────────────┐
+│    Database     │
+│ User/Data Store │
+└────────┬────────┘
+         │
+         │ Query Results
+         ▼
+┌─────────────────┐
+│ Application     │
+│ Generates HTML  │
+└────────┬────────┘
+         │
+         ▼
+┌─────────────────┐
+│   Web Server    │
+│ Returns HTTPS   │
+│ Response        │
+└────────┬────────┘
+         │
+         │ Encrypted Response
+         ▼
+┌─────────────────┐
+│    Browser      │
+│ Renders Page    │
+└─────────────────┘
+Diagram Explanation
+The browser receives the URL entered by the user.
+A DNS lookup translates www.google.com into an IP address.
+A TCP connection is established to the server IP using port 443 for HTTPS.
+A TLS/SSL handshake creates an encrypted communication channel.
+The request passes through a firewall, where security rules are applied.
+A load balancer distributes the request to an available backend server.
+The web server receives the request and forwards dynamic requests to the application server.
+The application server executes business logic and requests data from the database.
+The database returns the requested data.
+The application server generates the HTML response.
+The web server sends the encrypted HTTPS response back to the browser.
+The browser renders the page and displays the Google homepage.
+Key Concepts Illustrated
+
+✓ DNS Resolution
+✓ TCP/IP Communication
+✓ HTTPS (Port 443)
+✓ SSL/TLS Encryption
+✓ Firewall Inspection
+✓ Load Balancing
+✓ Web Server Processing
+✓ Application Server Logic
+✓ Database Queries
+✓ Browser Rendering
